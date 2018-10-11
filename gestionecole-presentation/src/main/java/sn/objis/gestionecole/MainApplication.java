@@ -135,7 +135,7 @@ public class MainApplication {
 					case '2':
 						List<Employe> list = iserviceEmpl.lire();
 						Stream<Employe> st = list.stream();
-						//st.forEach(System.out::println);
+						st.forEach(System.out::println);
 						break;
 					case '3':
 						Employe emp = new Employe();
