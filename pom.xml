@@ -17,7 +17,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-	
+
 	<dependencyManagement>
 		<dependencies>
 			<!-- JUnit -->
@@ -37,7 +37,7 @@
 		</dependencies>
 	</dependencyManagement>
 
-	
+
 	<modules>
 		<module>gestionecole-domaine</module>
 		<module>gestionecole-dao</module>
@@ -45,7 +45,7 @@
 		<module>gestionecole-utils</module>
 		<module>gestionecole-presentation</module>
 	</modules>
-	
+
 	<!-- copie -->
 	<build>
 		<pluginManagement><!-- lock down plugins versions to avoid using Maven 
