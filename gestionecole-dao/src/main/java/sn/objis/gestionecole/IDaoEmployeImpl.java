@@ -8,6 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.mysql.jdbc.jdbc2.optional.PreparedStatementWrapper;
 
 import sn.objis.gestionecole.Employe;
 import sn.objis.gestionecole.MySqlConnection;
@@ -37,10 +38,13 @@ public class IDaoEmployeImpl implements IDaoEmploye {
 			// Etape 2: Ex�cution de la requete
 			preparedStatement.executeUpdate();
 			System.out.println("Personne ajout�e avec succ�");
-		} catch (SQLException ex) {
+			preparedStatement.close();
+			} catch (SQLException ex) {
 			System.out.println("Erreur d'insertion\n"+ex);
 			ex.printStackTrace();
-		}
+		}finally {
+			System.out.println("Sortie de tratement");
+		  }
 	}
 
 	// Cette methode permet de lister les enregistrements de la table Employe
